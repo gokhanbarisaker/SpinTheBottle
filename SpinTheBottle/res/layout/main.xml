@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:spinningdrawableview="http://schemas.android.com/apk/res/com.monkeybusiness.spinthebottle"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    android:background="@color/zendrylblue" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_changebottle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Change bottle" />
+
+        <Button
+            android:id="@+id/button_currentrotationdegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get current rotation degree" />
+
+    </LinearLayout>
+        
+	<com.monkeybusiness.spinthebottle.SpinningDrawableView
+	    android:id="@+id/spinningDrawableView1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    spinningdrawableview:bottle_drawable="@drawable/bottle0" />
+
 </LinearLayout>
